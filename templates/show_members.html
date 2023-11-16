@@ -1,0 +1,8 @@
+{%import 'utility.html' as utl %}
+{{ utl.htmltop("Show Members") }}
+{{ utl.navbar("Show Members") }}
+
+<div class="containertable">
+    {{utl.display_table(data,header)}}
+    </div>
+{{utl.htmlbottom()}}

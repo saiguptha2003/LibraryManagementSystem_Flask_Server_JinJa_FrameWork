@@ -1,0 +1,31 @@
+{% import "utility.html" as util %}
+
+{{ util.htmltop("Create Author") }}
+{{ util.navbar("Create Author") }}
+<div class="container">
+    <form method="POST" action="{{ url_for('create_author') }}">
+        <div class="form-group">
+            <label for="authorid">Author ID</label>
+            <input type="text" class="form-control" id="authorid" name="authorid" placeholder="Author ID">
+            <small id="authorIdHelp" class="form-text text-muted">Enter the unique identifier for the author.</small>
+        </div>
+        <div class="form-group">
+            <label for="authorname">Author Name</label>
+            <input type="text" class="form-control" id="authorname" name="authorname" placeholder="Author Name">
+            <small id="authorNameHelp" class="form-text text-muted">Enter the name of the author.</small>
+        </div>
+        <div class="form-group">
+            <label for="birth_date">Birth Date</label>
+            <input type="text" class="form-control" id="birth_date" name="birth_date" placeholder="Birth Date">
+            <small id="birthDateHelp" class="form-text text-muted">Enter the birth date of the author.</small>
+        </div>
+        <div class="form-group">
+            <label for="nationality">Nationality</label>
+            <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Nationality">
+            <small id="nationalityHelp" class="form-text text-muted">Enter the nationality of the author.</small>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+{{ util.htmlbottom() }}

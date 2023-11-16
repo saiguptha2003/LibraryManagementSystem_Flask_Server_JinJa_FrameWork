@@ -1,0 +1,41 @@
+{% import "utility.html" as util %}
+
+{{ util.htmltop("Create Book") }}
+{{ util.navbar("Create Book")}}
+<div class="container">
+    <form method="POST" action="{{ url_for('createBook') }}">
+        <div class="form-group">
+            <label for="bookID">Book ID</label>
+            <input type="text" class="form-control" id="bookID" name="bookID" placeholder="Book ID">
+            <small id="bookIDHelp" class="form-text text-muted">Enter the unique identifier for the book.</small>
+        </div>
+        <div class="form-group">
+            <label for="bookName">Book Name</label>
+            <input type="text" class="form-control" id="bookName" name="bookName" placeholder="Book Name">
+            <small id="bookNameHelp" class="form-text text-muted">Enter the title of the book.</small>
+        </div>
+        <div class="form-group">
+            <label for="author_id">Author ID</label>
+            <input type="text" class="form-control" id="author_id" name="author_id" placeholder="Author ID">
+            <small id="authorIdHelp" class="form-text text-muted">Enter the unique identifier of the author.</small>
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input type="text" class="form-control" id="isbn" name="isbn" placeholder="ISBN">
+            <small id="isbnHelp" class="form-text text-muted">Enter the ISBN of the book.</small>
+        </div>
+        <div class="form-group">
+            <label for="published_year">Published Year</label>
+            <input type="text" class="form-control" id="published_year" name="published_year" placeholder="Published Year">
+            <small id="publishedYearHelp" class="form-text text-muted">Enter the year when the book was published.</small>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
+            <small id="quantityHelp" class="form-text text-muted">Enter the quantity of books available.</small>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+{{ util.htmlbottom() }}

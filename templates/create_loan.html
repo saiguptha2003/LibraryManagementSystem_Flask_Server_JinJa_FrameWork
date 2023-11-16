@@ -1,0 +1,31 @@
+{% import "utility.html" as util %}
+
+{{ util.htmltop("Create Loan") }}
+{{ util.navbar("Create Loan") }}
+<div class="container">
+    <form method="POST" action="{{ url_for('createLoan') }}">
+        <div class="form-group">
+            <label for="loanID">Loan ID</label>
+            <input type="text" class="form-control" id="loanID" name="loanID" placeholder="Loan ID">
+        </div>
+        <div class="form-group">
+            <label for="bookID">Book ID</label>
+            <input type="text" class="form-control" id="bookID" name="bookID" placeholder="Book ID">
+        </div>
+        <div class="form-group">
+            <label for="memID">Member ID</label>
+            <input type="text" class="form-control" id="memID" name="memID" placeholder="Member ID">
+        </div>
+        <div class="form-group">
+            <label for="loanDate">Loan Date</label>
+            <input type="text" class="form-control" id="loanDate" name="loanDate" placeholder="Loan Date">
+        </div>
+        <div class="form-group">
+            <label for="returnDate">Return Date</label>
+            <input type="text" class="form-control" id="returnDate" name="returnDate" placeholder="Return Date">
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+{{ util.htmlbottom() }}
