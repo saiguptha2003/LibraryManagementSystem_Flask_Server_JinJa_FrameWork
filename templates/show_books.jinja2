@@ -1,9 +1,8 @@
-{%import 'utility.html' as utl %}
-{{ utl.htmltop("Show Loans") }}
-{{ utl.navbar("Show Loans") }}
+{%import 'utility.jinja2' as utl %}
+{{ utl.htmltop("Show Books") }}
+{{ utl.navbar("Show Books") }}
 
 <div class="containertable">
     {{utl.display_table(data,header)}}
     </div>
-
 {{utl.htmlbottom()}}
